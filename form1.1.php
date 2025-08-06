@@ -7,3 +7,4 @@ $Z = $_GET['date'];
 echo "Event: " . $X . " at " . $Y . " on " . $Z;
 
 ?>
+
