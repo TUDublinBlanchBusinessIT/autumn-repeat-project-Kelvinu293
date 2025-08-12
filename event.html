@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h2>Add New Event</h2>
-
-    <form action="event.php" method="get">
-      Enter Event Title: <input type="text" name="title"><br><br>
-      Enter Event Date: <input type="date" name="date"><br><br>
+    <form method="POST" action="event.php">
+      Enter Event Name: <input type="text" name="name"><br><br>
+      Enter Event Category: <input type="text" name="category"><br><br>
       Enter Event Location: <input type="text" name="location"><br><br>
-      <input type="submit" value="Add Event">
+      Enter Event Date: <input type="date" name="date"><br><br>
+      <input type="submit" value="Add Event"> 
     </form>
+    
+
   </body>
 </html>
+
