@@ -4,7 +4,7 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     $_SESSION['logged_in'] = true; 
-    header("Location: event.html"); 
+    header("Location: welcome.php"); 
     exit();
 }
 ?>
