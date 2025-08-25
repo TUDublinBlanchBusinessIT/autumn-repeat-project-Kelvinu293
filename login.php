@@ -14,6 +14,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login here</h1>
+        <form method="post" action="">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
     <style>
     body {
       font-family: Arial, sans-serif;
@@ -55,16 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       margin-bottom: 10px;
     }
   </style>
-
-</head>
-<body>
-    <div class="login-container">
-        <h1>Login here</h1>
-        <form method="post" action="">
-            <input type="text" name="username" placeholder="Username" required><br>
-            <input type="password" name="password" placeholder="Password" required><br>
-            <input type="submit" value="Login">
-        </form>
-    </div>
 </body>
 </html>
+
