@@ -14,7 +14,15 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
-    <style>
+</head>
+<body>
+    <div class="container">
+        <h1>Come and booking with us for events</h1>
+        <p>Welcome to event planning.</p>
+        <p>Click the bottom buttom to book with us:</p>
+        <a href="event.html">Book here</a>
+    </div>
+     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #A4C8E1; 
@@ -46,13 +54,5 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
             background-color: #CD1C18; 
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Come and booking with us for events</h1>
-        <p>Welcome to event planning.</p>
-        <p>Click the bottom buttom to book with us:</p>
-        <a href="event.html">Book here</a>
-    </div>
 </body>
 </html>

@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-    <div class="container">
-  <h2 align="center">Booking</h2>
-  <form class="form-horizontal" action="processForm2.php" method="POST">
-    <div class="form-group">
-      <label class="control-label col-sm-5" for="idSubTenKG">Number of Bags Under 10 KG, Range 1 - 5(Max):</label>    
-      <div class="col-sm-7">
-        <input class="form-control" id="idSubTenKG" type="range" min="1" max="5" value="50" name="subTenKG">
-      </div>
+  
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Estimates</h1>
+    <div class="sub">Today estimates</div>
+
+    <div class="row">
+      <label for="events">Events happening today:
+        <span id="eventsOut" class="val">1</span>
+      </label>
+      <input id="events" type="range" min="1" max="10" value="1" />
     </div>
-    <div class="form-group">
-      <label class="control-label col-sm-5" for="idOverTenKG">Number of Bags between 10 and 20 KG, Range 1 - 5(Max):</label>
-      <div class="col-sm-7">          
-        <input class="form-control" id="idOverTenKG" type="range" min="1" max="5" value="50" name="overTenKG">
-      </div>
+
+    <div class="row">
+      <label for="attendees">Total attendees for today’s events:
+        <span id="attendeesOut" class="val">1</span>
+      </label>
+      <input id="attendees" type="range" min="1" max="200" value="1" />
     </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-5 col-sm-7">
-        <button type="submit" class="btn btn-default">Continue</button>
-      </div>
+
+    <div class="actions">
+      <button class="btn" type="button" onclick="resetVals()">Reset</button>
+      <button class="btn btn-primary" type="button" onclick="saveVals()">Save</button>
     </div>
-  </form>
-</div>
-</div>
+  </div>
 </body>
 </html>
