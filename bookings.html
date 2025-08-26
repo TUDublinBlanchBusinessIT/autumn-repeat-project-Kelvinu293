@@ -1,44 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-
 <body>
   <div class="wrap">
     <h1>Estimates</h1>
     <form action="bookings.php" method="POST">
+      
       <div class="sub">Today estimates</div>
       <div class="row">
         <label for="arrange">Events happening today:
           <span id="arrangeOut" class="val">1</span>
         </label>
-        <input id="arrange" type="range" min="1" max="10" value="1"/>
+        <input id="arrange" type="range" min="1" max="10" value="1" />
       </div>
 
       <div class="row">
         <label for="people">Total attendees for today’s events:
           <span id="peopleOut" class="val">1</span>
         </label>
-        <input id="people" type="range" min="1" max="200" value="1"/>
+        <input id="people" type="range" min="1" max="200" value="1" />
       </div>
 
       <div class="row">
@@ -54,11 +38,29 @@
       </div>
 
       <div class="actions">
-        <button class="btn" type="button" onclick="resetVals()">Reset</button>
-        <button class="btn btn-primary" type="button" onclick="saveVals()">Save</button>
+        <button type="reset">Reset</button>
+        <button type="submit">Save</button>
       </div>
     </form>
   </div>
-</body>
 
+  <script>
+    const arrange = document.getElementById('arrange');
+    const people = document.getElementById('people');
+    const arrangeOut = document.getElementById('arrangeOut');
+    const peopleOut = document.getElementById('peopleOut');
+
+    function sync() {
+      arrangeOut.textContent = arrange.value;
+      peopleOut.textContent = people.value;
+    }
+    arrange.addEventListener('input', sync);
+    people.addEventListener('input', sync);
+
+    form.addEventListener('reset', () => setTimeout(sync, 0));
+
+    sync();
+  </script>
+
+</body>
 </html>
