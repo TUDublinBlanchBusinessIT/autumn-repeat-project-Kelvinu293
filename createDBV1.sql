@@ -9,4 +9,5 @@ CREATE TABLE events (
     event_date DATE
 );
 
-
+Insert into events (name, category, location, event_date) values ('Tech Meetup', 'Technology', 'Dublin', '2025-09-10');
+Insert into events (name, category, location, event_date) values ('Art Fair', 'Arts', 'Cork', '2025-10-05');
