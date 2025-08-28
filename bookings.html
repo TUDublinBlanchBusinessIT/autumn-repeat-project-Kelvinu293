@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title></title>
@@ -8,32 +9,32 @@
 <body>
   <div class="wrap">
     <h1>Estimates</h1>
-    <form action="bookings.php" method="POST">
-      
-      <div class="sub">Today estimates</div>
-      <div class="row">
-        <label for="arrange">Events happening today:
-          <span id="arrangeOut" class="val">1</span>
-        </label>
-        <input id="arrange" type="range" min="1" max="10" value="1" />
-      </div>
-
+    <form id="bookingForm" action="bookings.php" method="POST">
       <div class="row">
         <label for="people">Total attendees for today’s events:
           <span id="peopleOut" class="val">1</span>
         </label>
-        <input id="people" type="range" min="1" max="200" value="1" />
+        <input id="people" name="people" type="range" min="1" max="200" value="1" />
+      </div>
+
+      <div class="row">
+        <label for="start_time">Start of event:</label><br>
+        <input type="time" id="start_time" name="start_time" required>
+      </div>
+
+      <div class="row">
+        <label for="end_time">End of event:</label><br>
+        <input type="time" id="end_time" name="end_time" required>
       </div>
 
       <div class="row">
         <label> Event ID:
-          <input type="number" name="event_id" required min="1">
+          <input type="text" id="event_id" name="event_id" required>
         </label>
       </div>
-
       <div class="row">
         <label> Attendee ID:
-          <input type="number" name="attendee_id" required min="1">
+          <input type="text" id="attendee_id" name="attendee_id" required>
         </label>
       </div>
 
@@ -45,16 +46,13 @@
   </div>
 
   <script>
-    const arrange = document.getElementById('arrange');
     const people = document.getElementById('people');
-    const arrangeOut = document.getElementById('arrangeOut');
     const peopleOut = document.getElementById('peopleOut');
+    const form = document.getElementById('bookingForm');
 
     function sync() {
-      arrangeOut.textContent = arrange.value;
       peopleOut.textContent = people.value;
     }
-    arrange.addEventListener('input', sync);
     people.addEventListener('input', sync);
 
     form.addEventListener('reset', () => setTimeout(sync, 0));
@@ -63,4 +61,5 @@
   </script>
 
 </body>
+
 </html>
