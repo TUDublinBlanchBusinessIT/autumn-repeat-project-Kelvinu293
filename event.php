@@ -7,6 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $location = isset($_POST['location']) ? trim($_POST['location']) : '';
     $date = isset($_POST['date']) ? trim($_POST['date']) : '';
     
+     if (!isset($_POST['info']) || $_POST['info'] !== 'yes') {
+        echo "Please tick the checkbox to confirm the information is correct. ";
+        exit;
+    }
 
     if ($name === '' || $category === '' || $location === '' || $date === '') {
         echo "Please fill in all fields.";
