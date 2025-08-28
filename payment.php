@@ -4,8 +4,13 @@ include 'dbcon.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $booking_id = (int)($_POST['booking_id'] ?? 0);
-    $amount     = $_POST['amount'] ?? '';
-    $paid_at    = $_POST['paid_at'] ?? ''; 
+    $amount = $_POST['amount'] ?? '';
+    $paid_at = $_POST['paid_at'] ?? ''; 
+    $method = $_POST['method'] ?? '';
+
+    if ($method === '') {
+        exit('Please select a payment method.');
+    }
 
     if ($booking_id <= 0 || $amount === '') {
         exit('Please enter Booking ID and Amount.');
@@ -26,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (mysqli_query($conn, $sql)) {
-        echo "Saved payment: Booking $booking_id, Amount $amount";
+        echo "Saved payment: Booking $booking_id, Amount $amount Method chosen: $method";
     } else {
         echo "DB Error: " . mysqli_error($conn);
     }
