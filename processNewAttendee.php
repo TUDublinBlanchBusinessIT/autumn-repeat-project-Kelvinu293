@@ -3,9 +3,9 @@ include 'dbcon.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $firstname = isset($_POST['firstname']) ? trim($_POST['firstname']) : '';
-    $lastname  = isset($_POST['lastname'])  ? trim($_POST['lastname'])  : '';
-    $email     = isset($_POST['email'])     ? trim($_POST['email'])     : '';
-    $type      = isset($_POST['type'])      ? trim($_POST['type'])      : '';
+    $lastname = isset($_POST['lastname']) ? trim($_POST['lastname'])  : '';
+    $email = isset($_POST['email']) ? trim($_POST['email'])     : '';
+    $type = isset($_POST['type']) ? trim($_POST['type'])      : '';
 
     if ($firstname === '' || $lastname === '' || $email === '' || $type === '') {
         echo "Please fill in all fields.";
