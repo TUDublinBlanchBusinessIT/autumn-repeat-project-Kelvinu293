@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h2>Add Payment</h2>
     <form method="POST" action="payment.php">
         Booking ID: <input type="number" name="booking_id" required min="1"><br>
         Amount: <input type="number" name="amount" step="5" required><br>
         Paid: <input type="datetime-local" name="paid_at"><br>
+
+        <strong>Choose Payment Methods:</strong><br>
+        <label><input type="radio" name="method" value="credit_card" required> Credit Card</label><br>
+        <label><input type="radio" name="method" value="debit_card"> Debit Card</label><br>
+        <label><input type="radio" name="method" value="revolut"> Revolut</label><br>
+        <label><input type="radio" name="method" value="apple_pay"> Apple Pay</label><br><br>
         <input type="submit" value="Save Payment">
     </form>
 </body>
+
 </html>
