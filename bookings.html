@@ -61,6 +61,32 @@
     sync();
   </script>
 
+
+<style>
+  /* Page + card */
+body{font-family:Arial, sans-serif;background:#f5f7fa;margin:0;padding:0;display:flex;justify-content:center;align-items:flex-start;min-height:100vh}
+.wrap{width:90%;max-width:460px;background:#fff;margin:24px auto;padding:20px 22px;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,.08)}
+h1{margin:0 0 14px;color:#222;font-size:20px;text-align:center}
+
+/* Rows & labels */
+.row{margin:12px 0}
+label{display:block;margin-bottom:6px;font-weight:700;color:#444}
+
+/* Inputs */
+input[type="time"],input[type="text"],input[type="number"]{width:100%;padding:9px 10px;border:1px solid #cfd6df;border-radius:6px;font-size:14px;box-sizing:border-box}
+input[type="time"]:focus,input[type="text"]:focus,input[type="number"]:focus{outline:none;border-color:#6aa0ff;box-shadow:0 0 0 3px rgba(35,115,230,.15)}
+
+/* Range + live value */
+#people{width:100%}
+.val{display:inline-block;background:#eef4ff;color:#2b63d9;padding:2px 8px;border-radius:999px;font-weight:700}
+
+/* Actions */
+.actions{display:flex;gap:10px;justify-content:center;margin-top:8px}
+.actions button{padding:9px 14px;border:0;border-radius:6px;background:#2b63d9;color:#fff;cursor:pointer;font-size:14px}
+.actions button[type="reset"]{background:#6c757d}
+.actions button:hover{filter:brightness(.95)}
+
+</style>
 </body>
 
 </html>
