@@ -1,8 +1,9 @@
 <?php
 include 'dbcon.php';
 
+// Check if form data was sent using POST method
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $username = $_POST['username'];
+    $username = $_POST['username'];  // Get username/password input
     $password = $_POST['password'];
 
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
@@ -33,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <h3>Existing Users</h3>
   <ul>
     <?php
-    $res = mysqli_query($conn, "SELECT id, username FROM users");
+    $res = mysqli_query($conn, "SELECT id, username FROM users"); // Fetch and show list of existing users
     while ($row = mysqli_fetch_assoc($res)) {
         echo "<li>ID {$row['id']} - {$row['username']}</li>";
     }
