@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         $message = "Error: " . mysqli_error($conn);
     }
-    header("Location: welcome.php");
+    header("Location: event.html");
     exit();
 }
 ?>

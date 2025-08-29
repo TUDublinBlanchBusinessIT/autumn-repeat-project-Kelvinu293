@@ -17,8 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($conn, $sql)) {
         echo "Attendee added successfully. ";
-        echo "<a href='attendee.html'>Add another</a>";
-        echo "<a href='listAttendees.php'>View list</a>";
+        echo "<a href='bookings.html'>Book here</a>";
     } else {
         echo "Error: " . htmlspecialchars(mysqli_error($conn));
     }

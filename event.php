@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $sql)) {
         echo "Event added successfully!";
-        echo "<br><a href='event.html'>Add another event</a>";
+        echo "<br><a href='attendee.html'>Go to attendee</a>";
     } else {
         echo "Error: " . mysqli_error($conn);
     }

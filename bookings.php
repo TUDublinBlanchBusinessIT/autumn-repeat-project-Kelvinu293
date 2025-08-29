@@ -31,7 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               Attendee ID: $attendee_id<br>
               People: $people<br>
               Start: $start_time<br>
-              End: $end_time";
+              End: $end_time <br>";
+              echo "<a href='Payment.html'>Collect payment here</a>";
     } else {
         echo "DB Error: " . mysqli_error($conn);
     }
