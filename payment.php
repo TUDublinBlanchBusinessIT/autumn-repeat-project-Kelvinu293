@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (mysqli_query($conn, $sql)) {
         echo "Saved payment: Booking $booking_id, Amount $amount Method chosen: $method";
+         echo "<br><a href='login.php'>Book again</a>";
     } else {
         echo "DB Error: " . mysqli_error($conn);
     }
